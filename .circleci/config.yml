@@ -1,0 +1,41 @@
+version: 2.1
+jobs:
+  deploy:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          name: "Clone repository"
+          no_output_timeout: 5m
+          command: |
+            git clone -b $BRANCH git@github.com:augustomegres/personal-page.git .
+      - run:
+          name: "Installing dependencies"
+          command: |
+            yarn
+      - when:
+          condition:
+            equal: [main, << pipeline.git.branch >>]
+          steps:
+            - run:
+                name: "Build production"
+                command: |
+                  yarn build:production
+            - run: 
+                name: "Removing old static folder"
+                command: |
+                  ssh $USER@$HOST "rm -rf /var/www/html/megres.dev/personal-page/*"
+            - run:
+                name: Copy static build folder to production server
+                command: |
+                  scp -pr dist $USER@$HOST:/var/www/html/megres.dev/personal-page
+                  
+workflows:
+  main:
+    jobs:
+      - deploy:
+          filters:
+            branches:
+              only:
+                - main
