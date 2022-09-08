@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   deploy:
     machine:
-      - image: ubuntu:latest
+      image: "ubuntu-2204:2022.04.1"
     environment:
       BRANCH: << pipeline.git.branch >>
     steps:
