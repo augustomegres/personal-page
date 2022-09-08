@@ -1,7 +1,7 @@
 version: 2.1
 jobs:
   deploy:
-    docker:
+    machine:
       - image: ubuntu:latest
     environment:
       BRANCH: << pipeline.git.branch >>
