@@ -31,6 +31,7 @@ jobs:
             - run:
                 name: Copy static build folder to production server
                 command: |
+                  ls
                   scp -pr dist $USER@$HOST:/var/www/html/megres.dev/personal-page
 
 workflows:
