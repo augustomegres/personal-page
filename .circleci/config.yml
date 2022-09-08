@@ -3,13 +3,15 @@ jobs:
   deploy:
     docker:
       - image: cimg/base:stable
+    environment:
+      BRANCH: << pipeline.git.branch >>
     steps:
       - checkout
       - run:
           name: "Clone repository"
           no_output_timeout: 5m
           command: |
-            git clone -b $BRANCH git@github.com:augustomegres/personal-page.git .
+            git clone -b $BRANCH git@github.com:augustomegres/personal-page.git
       - run:
           name: "Installing dependencies"
           command: |
@@ -22,7 +24,7 @@ jobs:
                 name: "Build production"
                 command: |
                   yarn build:production
-            - run: 
+            - run:
                 name: "Removing old static folder"
                 command: |
                   ssh $USER@$HOST "rm -rf /var/www/html/megres.dev/personal-page/*"
@@ -30,7 +32,7 @@ jobs:
                 name: Copy static build folder to production server
                 command: |
                   scp -pr dist $USER@$HOST:/var/www/html/megres.dev/personal-page
-                  
+
 workflows:
   main:
     jobs:

@@ -1,8 +1,11 @@
 // https://docs.cypress.io/api/introduction/api.html
 
-describe('My First Test', () => {
-  it('visits the app root url', () => {
-    cy.visit('/')
-    cy.contains('h1', 'You did it!')
-  })
-})
+describe("Home", () => {
+  it("main page should render correctly", () => {
+    cy.visit("/");
+    cy.contains("h1", "OLÁ,");
+    cy.contains("h1", "SOU O ZÉ");
+    cy.contains("h1", "FULLSTACK");
+    cy.contains("h1", "DEVELOPER");
+  });
+});

@@ -37,7 +37,7 @@ const MenuOptions: { id: number; title: string; icon: Component; route: string }
   <header>
     <div class="menu" v-if="!showNav">
       <div class="menu-logo" @click="router.push('/')" style="cursor: pointer; user-select: none">
-        <img :src="DevIcon" style="width: 40px" />
+        <p class="rainbow">&lt; / ></p>
       </div>
       <div class="menu-items">
         <div class="item" v-for="item in MenuOptions" :key="item.id" @click="router.push(item.route)">
@@ -49,7 +49,7 @@ const MenuOptions: { id: number; title: string; icon: Component; route: string }
       <div class="mobile-menu">
         <div class="menu-btn" @click="sidebar.setOpen"><MenuOutlined /></div>
         <div class="menu-logo" @click="router.push('/')" style="cursor: pointer; user-select: none">
-          <img :src="DevIcon" style="width: 40px" />
+          <p class="rainbow">&lt; / ></p>
         </div>
       </div>
       <SidebarVue @setOpen="sidebar.setOpen()" :menuItems="MenuOptions" :isOpen="sidebar.isOpen" />
@@ -57,7 +57,7 @@ const MenuOptions: { id: number; title: string; icon: Component; route: string }
   </header>
 </template>
 
-<style>
+<style scoped>
 header {
   display: flex;
   justify-content: space-between;
@@ -81,6 +81,25 @@ header {
 
 .mobile-menu .menu-logo img {
   width: 30px !important;
+}
+
+.rainbow {
+  font-weight: 900;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(
+    315deg,
+    rgba(102, 102, 255, 1) 0%,
+    rgba(0, 239, 255, 1) 20%,
+    rgba(0, 201, 42, 1) 40%,
+    rgba(239, 255, 0, 1) 60%,
+    rgba(255, 51, 153, 1) 80%,
+    rgba(102, 102, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow_animation 6s ease-in-out infinite;
+  background-size: 400% 100%;
 }
 
 .menu-items {
@@ -137,5 +156,16 @@ header {
 
 .navbar {
   position: absolute;
+}
+
+@keyframes rainbow_animation {
+  0%,
+  100% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 100% 0;
+  }
 }
 </style>

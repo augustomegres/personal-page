@@ -48,9 +48,22 @@ experiences.push({
   standing: "Mai/2018 até Mai/2019",
   paragraphs: [
     {
+      title: "Meu início na empresa",
       descriptions: [
-        "A energisa é a empresa onde tive meu primeiro contato com um ambiente coorporativo realmente grande.",
-        "A energisa é a empresa onde tive meu primeiro contato com um ambiente coorporativo realmente grande.",
+        "Após concluir meu estágio, fui contratado na empresa em um RH, fiquei nesta empresa por um ano e meio. Durante este período atuei apoiando em praticamente tudo dentro do RH, Departamento pessoal, Treinamento, Recrutamento e Seleção e apoio a gestão com planilias e apresentações.",
+      ],
+    },
+    {
+      title: "Projeto E-Nova",
+      descriptions: [
+        "Junto de outro colaborador, desenvolvemos um projeto com o intuito de agilizar os processos de recrutamento e seleção, este projeto foi o desenvolvimento de uma planilha centralizadora, que criava pastas com documentos, gerava pdfs com perfis dos candidatos, envia emails de forma mais prática e etc...",
+        "No dia em que apresentamos o projeto, vencemos o concurso interno da empresa em segundo lugas, com uma bonificação generosa em dinheiro.",
+      ],
+    },
+    {
+      title: "Saída da empresa",
+      descriptions: [
+        "Após um bom tempo na empresa, senti que já não estava tão feliz, então decidi sair para estudar desenvolvimento por conta própria, pois na faculdade eu não estava obtendo os resultados que queria, e me faltava tempo, então fui muito apoiado pela minha família em abandonar a empresa e a faculdade para estudar por conta própria.",
       ],
     },
   ],
@@ -63,8 +76,22 @@ experiences.push({
   standing: "Out/2020 até Jan/2022",
   paragraphs: [
     {
+      title: "Meu início na empresa",
       descriptions: [
-        "A energisa é a empresa onde tive meu primeiro contato com um ambiente coorporativo realmente grande.",
+        "Após um período de estudos, finalmente fui contratado pela SmartNX, para um novo projeto que estava iniciando, eu realmente não sabia muito bem o que esperar, mas mergulhei de cabeça.",
+        "O projeto era o desenvolvimento de uma plataforma em que o intuito principal é oferecer uma garantia locatícia totalmente personalizada para imobiliárias.",
+      ],
+    },
+    {
+      title: "Tecnologias",
+      descriptions: [
+        "As tecnologias do projeto de início eram apenas um frontend construído em React, e o backend construído em NodeJS conectado a um banco SQL.",
+      ],
+    },
+    {
+      title: "Transferência",
+      descriptions: [
+        "No final de 2021, foi noticiado que este pequeno projeto se tornaria uma empresa, desvinculada da SmartNX, pois o projeto já beneficiava milhares de locatários e centenas de imobiliárias, então no início de 2022 o projeto Ucred ganhou um CNPJ próprio, e todos colaboradores foram transferidos para este novo CNPJ.",
       ],
     },
   ],
@@ -77,8 +104,26 @@ experiences.push({
   standing: "Jan/2022 até Atualmente",
   paragraphs: [
     {
+      title: "Continuando a jornada",
       descriptions: [
-        "A energisa é a empresa onde tive meu primeiro contato com um ambiente coorporativo realmente grande.",
+        "Conforme comentei na experiência da SmartNX, o projeto tomou forma e virou uma empresa, e apesar do time de produto ser constituído apenas de 2 desenvolvedores, muita coisa mudou em pouco tempo.",
+      ],
+    },
+    {
+      title: "Evoluindo o projeto",
+      descriptions: [
+        "Depois de um tempo, o projeto tomou forma, e muitas das coisas mudaram em relação a parte técnica do projeto, passamos a utilizar o Redis, para trabalhar com filas, e também o Mongo, principalmente para armazenamento de logs.",
+        "Nosso backend passou a ter testes automatizados, algo que não havia sido implantado desde o início do projeto, mas era crucial.",
+        "Além disso separamos nossa aplicação em aplicações menores, para dividir a responsabilidade, então a plataforma que antes centralizava tudo, se dividiu em mais 3 plataformas, sendo uma administrativa interna, uma para os usuários de imobiliárias e locatários, e mais uma para revendedores da plataforma.",
+      ],
+    },
+    {
+      title: "Tecnologias",
+      descriptions: [
+        "Depois de tanta mudança, nossas tecnologias passaram a ser as seguintes:",
+        "Backend: NodeJS com Express (Typescript)",
+        "Frontend: React (Typescript)",
+        "Banco de dados: Redis (Memória), Mongo (NoSQL) e Mysql (SQL)",
       ],
     },
   ],
@@ -173,6 +218,13 @@ function removeSelectedExperience() {
   color: rgb(0, 255, 200);
 }
 
+.experience-container h2 {
+  font-weight: 200;
+}
+
+.experience-container h3 {
+  font-weight: 200;
+}
 .experience-container p {
   font-family: "Roboto", Helvetica, sans-serif;
   margin-top: 8px;
