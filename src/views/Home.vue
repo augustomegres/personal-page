@@ -8,7 +8,7 @@ const showMemoji = window.innerWidth > 980;
     <body>
       <div style="display: flex; justify-content: space-around">
         <div class="presentation">
-          <h1>OLÁ,</h1>
+          <h1>OLÁ</h1>
           <h1 style="margin-bottom: 10px">SOU O ZÉ</h1>
           <h1 class="rainbow">FULLSTACK</h1>
           <h1 class="rainbow">DEVELOPER</h1>
