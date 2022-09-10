@@ -226,7 +226,7 @@ function removeSelectedExperience() {
   font-weight: 200;
 }
 .experience-container p {
-  font-family: "Roboto", Helvetica, sans-serif;
+  font-family: "Poppins", Helvetica, sans-serif;
   margin-top: 8px;
   font-size: 12pt;
   font-weight: 100;
