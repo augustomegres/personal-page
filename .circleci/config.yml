@@ -27,11 +27,11 @@ jobs:
             - run:
                 name: "Removing old static folder"
                 command: |
-                  ssh $USER@$HOST "rm -rf /var/www/html/megres.dev/personal-page/*"
+                  ssh $USER@$HOST "rm -rf /var/www/html/megres.dev/*"
             - run:
                 name: Copy static build folder to production server
                 command: |
-                  scp -pr dist $USER@$HOST:/var/www/megres.dev/personal-page
+                  scp -pr dist $USER@$HOST:/var/www/html/megres.dev/
 
 workflows:
   main:
