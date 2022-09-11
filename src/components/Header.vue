@@ -27,9 +27,9 @@ if (window.innerWidth >= 960) {
 const MenuOptions: { id: number; title: string; icon: Component; route: string }[] = [
   { id: 1, title: "Início", icon: HomeOutlined, route: "/" },
   { id: 2, title: "Sobre", icon: UserOutlined, route: "/sobre" },
-  { id: 3, title: "Projetos", icon: BranchesOutlined, route: "/projetos" },
+  //{ id: 3, title: "Projetos", icon: BranchesOutlined, route: "/projetos" },
   { id: 4, title: "Experiências", icon: ExperimentOutlined, route: "/trajetoria-profissional" },
-  { id: 5, title: "Artigos", icon: EditOutlined, route: "/artigos" },
+  //{ id: 5, title: "Artigos", icon: EditOutlined, route: "/artigos" },
 ];
 </script>
 

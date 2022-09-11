@@ -18,21 +18,25 @@ const router = createRouter({
       name: "about",
       component: About,
     },
+    /*
     {
       path: "/projetos",
       name: "projects",
       component: Projects,
     },
+    */
     {
       path: "/trajetoria-profissional",
       name: "experiences",
       component: Experiences,
     },
+    /*
     {
       path: "/artigos",
       name: "article",
       component: Articles,
     },
+    */
   ],
 });
 
